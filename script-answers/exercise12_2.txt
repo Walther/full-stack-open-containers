@@ -1,0 +1,8 @@
+# start the container
+docker container run -it ubuntu bash
+
+# make the dir
+mkdir -p /usr/src/app
+
+# create the file
+touch /usr/src/app/index.js
