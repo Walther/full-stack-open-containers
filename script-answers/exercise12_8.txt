@@ -1,0 +1,15 @@
+# list containers
+docker ps
+
+# jump into a mongo shell in the container
+docker exec -it efdfcd50597d bash 
+mongosh -u the_username -p the_password localhost/the_database
+
+# list all todos
+db.todos.find({})
+
+# insert a todo
+db.todos.insertOne({text: "Increase the number of tools in my toolbelt", done: false})
+
+# verify it got inserted
+db.todos.find({})
