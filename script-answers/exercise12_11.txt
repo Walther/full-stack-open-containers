@@ -1,0 +1,36 @@
+# get the containers
+docker ps
+
+# exec in
+docker exec -it afb64b22fbeb redis-cli
+
+# list keys
+keys *
+
+# view the count
+get count
+
+# set the count
+set count 9001
+
+# get the modified count
+get count
+
+# verify the web api agrees
+exit
+curl http://localhost:3000/statistics
+
+# post a new todo with cli tools
+
+# verify the count has increased again
+docker exec -it afb64b22fbeb redis-cli
+get count
+# 9002
+
+# delete key
+del key count
+
+# post another todo
+# verify count increases
+get count
+# 1
