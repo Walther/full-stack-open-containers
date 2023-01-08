@@ -1,6 +1,5 @@
 services:
   app:
-    image: hello-front-dev
     build:
       context: .
       dockerfile: dev.Dockerfile
@@ -8,4 +7,3 @@ services:
       - ./:/usr/src/app
     ports:
       - 4000:4000
-    container_name: hello-front-dev
