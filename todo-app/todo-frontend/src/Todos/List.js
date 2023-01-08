@@ -5,13 +5,13 @@ const TodoList = ({ todos, deleteTodo, completeTodo }) => {
   return (
     <>
       {todos
-        .map((todo) => {
+        .map((todo) => (
           <Todo
             todo={todo}
             deleteTodo={deleteTodo}
             completeTodo={completeTodo}
-          />;
-        })
+          />
+        ))
         .reduce((acc, cur) => [...acc, <hr />, cur], [])}
     </>
   );
